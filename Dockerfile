@@ -5,7 +5,7 @@ FROM golang:1.20 as builder
 RUN go install go.k6.io/xk6/cmd/xk6@latest
 # For our example, we'll add support for output of test metrics to InfluxDB v2.
 # Feel free to add other extensions using the '--with ...'.
-RUN xk6 build \
+RUN xk6 build v0.48.0 \
     --with github.com/LeonAdato/xk6-output-statsd \
     --output /k6
 
