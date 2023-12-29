@@ -7,6 +7,7 @@ RUN go install go.k6.io/xk6/cmd/xk6@latest
 # Feel free to add other extensions using the '--with ...'.
 RUN xk6 build v0.48.0 \
     --with github.com/LeonAdato/xk6-output-statsd \
+    --with github.com/szkiba/xk6-dashboard@latest \
     --output /k6
 
 # Use the operator's base image and override the k6 binary
