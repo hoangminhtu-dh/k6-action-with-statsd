@@ -24,7 +24,7 @@ inputs:
     default: ''
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: ghcr.io/deliveryhero/dp-traffic-eng-k6-statsd:main
   env:
     K6_CLOUD_TOKEN: ${{ inputs.token }}
   args:
